@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Hello Koa 2!</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/lodash.min.js"></script>
+    <script src="/js/pixi.js"></script>
+    <script src="/js/knockout.js"></script>
+</head>
+
+<body>
+    <div id="gui-container">
+        <h3>Gui</h3>
+
+
+        <label>Number to add</label>
+        <input data-bind="value:numToAdd">
+
+        <button data-bind="click:addCircle">Add Circle</button>
+
+        <div>
+
+            <h4>Circles:</div>
+        <ul data-bind="foreach: circleList">
+            <li>
+                <span data-bind="text:x"></span>:
+                <span data-bind="text:y"></span>
+            </li>
+        </ul>
+        <div style="clear:both"></div>
+    </div>
+    <div id="render">
+        <canvas id="surface" style="touch-action: none; cursor: inherit;"></canvas>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
